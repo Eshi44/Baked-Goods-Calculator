@@ -13,6 +13,10 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 
 public class BakeryManagementSystemClass {
 
@@ -87,6 +91,14 @@ public class BakeryManagementSystemClass {
 		Lemon_Drop_Bar.setFont(new Font("Times New Roman", Font.BOLD, 30));
 		
 		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		panel_1.add(textField);
 		textField.setColumns(12);
@@ -98,12 +110,37 @@ public class BakeryManagementSystemClass {
 		
 		JLabel Vanilla_Cupcake = new JLabel("Vanilla Cupcake");
 		Vanilla_Cupcake.setFont(new Font("Times New Roman", Font.BOLD, 30));
-		panel_2.add(Vanilla_Cupcake);
 		
 		textField_1 = new JTextField();
+		textField_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_1.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_1.setColumns(12);
-		panel_2.add(textField_1);
+		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
+		gl_panel_2.setHorizontalGroup(
+			gl_panel_2.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_2.createSequentialGroup()
+					.addGap(6)
+					.addComponent(Vanilla_Cupcake)
+					.addGap(5)
+					.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		);
+		gl_panel_2.setVerticalGroup(
+			gl_panel_2.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_2.createSequentialGroup()
+					.addGap(5)
+					.addComponent(Vanilla_Cupcake))
+				.addGroup(gl_panel_2.createSequentialGroup()
+					.addGap(7)
+					.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+		);
+		panel_2.setLayout(gl_panel_2);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
@@ -115,6 +152,14 @@ public class BakeryManagementSystemClass {
 		panel_3.add(Chocolate_Cake);
 		
 		textField_2 = new JTextField();
+		textField_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_2.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_2.setColumns(12);
 		panel_3.add(textField_2);
@@ -129,6 +174,14 @@ public class BakeryManagementSystemClass {
 		panel_4.add(Mint_Oreo_Cake);
 		
 		textField_3 = new JTextField();
+		textField_3.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_3.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_3.setColumns(12);
 		panel_4.add(textField_3);
@@ -143,6 +196,12 @@ public class BakeryManagementSystemClass {
 		panel_5.add(Gooey_Brownies);
 		
 		textField_4 = new JTextField();
+		textField_4.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_4.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+			}
+		});
 		textField_4.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_4.setColumns(12);
 		panel_5.add(textField_4);
@@ -157,6 +216,14 @@ public class BakeryManagementSystemClass {
 		panel_6.add(Banana_Pudding);
 		
 		textField_5 = new JTextField();
+		textField_5.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_5.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_5.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_5.setColumns(12);
 		panel_6.add(textField_5);
@@ -171,6 +238,14 @@ public class BakeryManagementSystemClass {
 		panel_7.add(Cottage_Pudding);
 		
 		textField_6 = new JTextField();
+		textField_6.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_6.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_6.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_6.setColumns(12);
 		panel_7.add(textField_6);
@@ -185,6 +260,14 @@ public class BakeryManagementSystemClass {
 		panel_8.add(Boston_Cream_Pie);
 		
 		textField_7 = new JTextField();
+		textField_7.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_7.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_7.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_7.setColumns(12);
 		panel_8.add(textField_7);
@@ -199,6 +282,14 @@ public class BakeryManagementSystemClass {
 		panel_9.add(Cinnamon_Rolls);
 		
 		textField_8 = new JTextField();
+		textField_8.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_8.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_8.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_8.setColumns(12);
 		panel_9.add(textField_8);
@@ -213,6 +304,14 @@ public class BakeryManagementSystemClass {
 		panel_10.add(Ice_Cream_Cake);
 		
 		textField_9 = new JTextField();
+		textField_9.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField_9.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
 		textField_9.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_9.setColumns(12);
 		panel_10.add(textField_9);
@@ -227,6 +326,14 @@ public class BakeryManagementSystemClass {
 		panel_11.add(lblCost);
 		
 		textField_10 = new JTextField();
+		textField_10.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
+		textField_10.setHorizontalAlignment(SwingConstants.RIGHT);
 		textField_10.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_10.setColumns(12);
 		panel_11.add(textField_10);
@@ -241,6 +348,14 @@ public class BakeryManagementSystemClass {
 		panel_12.add(lblTax);
 		
 		textField_11 = new JTextField();
+		textField_11.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
+		textField_11.setHorizontalAlignment(SwingConstants.RIGHT);
 		textField_11.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_11.setColumns(12);
 		panel_12.add(textField_11);
@@ -255,6 +370,14 @@ public class BakeryManagementSystemClass {
 		panel_13.add(label_1);
 		
 		textField_12 = new JTextField();
+		textField_12.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent evt) {
+				Child_Bakery iNum = new Child_Bakery();
+				iNum.ClearNumbers(evt);
+			}
+		});
+		textField_12.setHorizontalAlignment(SwingConstants.RIGHT);
 		textField_12.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField_12.setColumns(12);
 		panel_13.add(textField_12);
@@ -265,6 +388,92 @@ public class BakeryManagementSystemClass {
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+//				clear input values and set value as "0"
+				JTextField cleartext = null;
+				for (java.awt.Component c:panel_1.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_2.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_3.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_4.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_5.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_6.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_7.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_8.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_9.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_10.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_11.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_12.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				for (java.awt.Component c:panel_13.getComponents()) {
+					if (c.getClass().toString().contains("javax.swing.JTextField")) {
+						cleartext=(JTextField)c;
+						cleartext.setText("");
+					}
+				}
+				
+			}
+		});
 		btnClear.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btnClear.setBounds(838, 602, 142, 84);
 		frame.getContentPane().add(btnClear);

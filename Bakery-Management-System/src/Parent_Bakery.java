@@ -57,7 +57,7 @@ public class Parent_Bakery {
 	}
 	
 	
-	public void ClearText(java.awt.event.KeyEvent evt) {
+	public void ClearNumbers(java.awt.event.KeyEvent evt) {
 		char iNum =evt.getKeyChar();
 		if(!(Character.isDigit(iNum))
 				||(iNum == KeyEvent.VK_BACK_SPACE)
