@@ -1,3 +1,5 @@
+import java.awt.event.KeyEvent;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -41,10 +43,27 @@ public class Parent_Bakery {
 //	exit application method
 	public void iExitManagementSystem() {
 		frame = new JFrame();
-		if (JOptionPane.showConfirmDialog(frame, "Confirm you wish to exit", "Bakery Management System"),
+		if (JOptionPane.showConfirmDialog(frame, "Confirm you wish to exit", "Bakery Management System",
 				JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
 					System.exit(0);
 				}
+	}
+	
+	public double mcTax = 0.85;
+//	method to calculate tax
+	public Double cFindTax(double cAmount) {
+		double FindTax = cAmount -(cAmount* mcTax);
+		return FindTax;
+	}
+	
+	
+	public void ClearText(java.awt.event.KeyEvent evt) {
+		char iNum =evt.getKeyChar();
+		if(!(Character.isDigit(iNum))
+				||(iNum == KeyEvent.VK_BACK_SPACE)
+				|| (iNum == KeyEvent.VK_DELETE)) {
+			evt.consume();
+		}
 	}
 }
 

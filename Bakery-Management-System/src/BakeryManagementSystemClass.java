@@ -272,6 +272,8 @@ public class BakeryManagementSystemClass {
 		JButton btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Child_Bakery iExit = new Child_Bakery();
+				iExit.iExitManagementSystem();
 			}
 		});
 		btnExit.setFont(new Font("Tahoma", Font.BOLD, 25));
