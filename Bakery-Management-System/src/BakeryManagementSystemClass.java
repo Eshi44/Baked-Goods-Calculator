@@ -383,6 +383,38 @@ public class BakeryManagementSystemClass {
 		panel_13.add(textField_12);
 		
 		JButton btnNewButton = new JButton("Total");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Child_Bakery ItemCost = new Child_Bakery();
+				double iTax, iSubtotal, iTotal;
+				
+				ItemCost.Lemon_Drop_Bar = ItemCost.pLemon_Drop_Bar * Double.parseDouble(textField.getText());
+				ItemCost.Vanilla_Cupcake = ItemCost.pVanilla_Cupcake * Double.parseDouble(textField_1.getText());
+				ItemCost.Chocolate_Cake = ItemCost.pChocolate_Cake * Double.parseDouble(textField_2.getText());
+				ItemCost.Mint_Oreo_Cake = ItemCost.pMint_Oreo_Cake * Double.parseDouble(textField_3.getText());
+				ItemCost.Gooey_Brownies = ItemCost.pGooey_Brownies * Double.parseDouble(textField_4.getText());
+				ItemCost.Banana_Pudding = ItemCost.pBanana_Pudding * Double.parseDouble(textField_5.getText());
+				ItemCost.Cottage_Pudding = ItemCost.pCottage_Pudding * Double.parseDouble(textField_6.getText());
+				ItemCost.Boston_Cream_Pie = ItemCost.pBoston_Cream_Pie * Double.parseDouble(textField_7.getText());
+				ItemCost.Cinnamon_Rolls = ItemCost.pCinnamon_Rolls * Double.parseDouble(textField_8.getText());
+				ItemCost.Ice_Cream_Cake = ItemCost.pIce_Cream_Cake * Double.parseDouble(textField_9.getText());
+				
+				iSubtotal = ItemCost.GetTotal();
+				iTax = ItemCost.cFindTax(iSubtotal);
+				iTotal = iSubtotal + iTax;
+				
+				
+				String SubTotal = String.format("$%.2f", iSubtotal);
+				textField_10.setText(SubTotal);
+				
+				String Tax = String.format("$%.2f", iTax);
+				textField_11.setText(Tax);
+				
+				String Total = String.format("$%.2f", iTotal);
+				textField_12.setText(Total);
+			}
+		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 25));
 		btnNewButton.setBounds(686, 602, 142, 84);
 		frame.getContentPane().add(btnNewButton);
